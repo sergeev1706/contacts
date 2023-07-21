@@ -1,25 +1,32 @@
 import './App.css';
 
-import { useDispatch, useSelector } from 'react-redux';
-import { increment, decrement, addContact } from './storage/toolkitReducer';
+import AddButton from './components/addButton/AddButton';
+import SaveButton from './components/saveButton/SaveButton';
+import ClearButton from './components/clearButton/ClearButton';
+import ListGroups from './components/listGroups/ListGroups';
+import ActiveGroup from './components/activeGroup/activeGroup';
 
 function App() {
 
-  const dispatch = useDispatch()
-  const allContacts = useSelector(state => state.toolkit.allContacts)
-  const count = useSelector(state => state.toolkit.count)
-
   return (
-    <div>
-      {count}
-      <button onClick={() => dispatch(increment())}>increment</button>
-      <button onClick={() => dispatch(decrement())}>decrement</button>
-      <button onClick={() => dispatch(addContact(prompt()))}>add contact</button>
-      {allContacts.length > 0 ? 
-        allContacts.map((el, ind) => <div key={ind}>{el}</div>)
-        : 
-        <div></div> 
-      }
+    <div className='Add'>
+      <div className='block'>
+        <div className='card'>
+          <ListGroups />
+        </div>
+        <div className='card'>
+          <AddButton />
+          <SaveButton />
+          <ClearButton />
+        </div>
+      </div>
+      <div className='block'>
+        <ActiveGroup />
+      </div>
+      <div className='block'>
+        карточка контакта
+      </div>
+      
     </div>
   );
 }
