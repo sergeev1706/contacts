@@ -30,15 +30,15 @@ const ActiveGroup = () => {
             vk: 'vk',
         }))
     }
-    
+
 
     return (
         <div>
             <button onClick={addContact}>добавить контакт</button>
             <div className='active'>
-                {isActiveGroupName}
+                {isActiveGroupName ? isActiveGroupName : ''}
             </div>
-            {contactsList.length > 0 ? 
+            {contactsList ?
                 contactsList.map((el, ind) => <div key={ind}>{el.name}</div>)
                 :
                 <div>no contacts</div>

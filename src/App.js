@@ -26,7 +26,7 @@ function App() {
       <div className='block'>
         карточка контакта
       </div>
-      
+
     </div>
   );
 }
