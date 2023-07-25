@@ -1,12 +1,14 @@
 
 
-import React from 'react';
-
 const ClearButton = () => {
 
-    return (
-        <button onClick={() => localStorage.clear()}>удалить данные</button>
-    );
+  const handleClick = () => {
+    localStorage.clear();
+  }
+
+  return (
+    <button onClick={handleClick}>очистить данные</button>
+  )
 }
 
 export default ClearButton;

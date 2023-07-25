@@ -1,32 +1,35 @@
 import './App.css';
 
-import AddButton from './components/addButton/AddButton';
+import ListGroups from './components/listGroups/ListGroups';
+import AddGroupButton from './components/addGroupButton/AddGroupButton';
 import SaveButton from './components/saveButton/SaveButton';
 import ClearButton from './components/clearButton/ClearButton';
-import ListGroups from './components/listGroups/ListGroups';
-import ActiveGroup from './components/activeGroup/activeGroup';
+import AddContactButton from './components/addContactButton/AddContactButton';
+import ActiveGroup from './components/activeGroup/ActiveGroup';
+import ActiveContact from './components/activeContact/ActiveContact';
 
 function App() {
 
+
   return (
     <div className='Add'>
-      <div className='block'>
-        <div className='card'>
+      <div className='row'>
+        <div className='block'>
           <ListGroups />
         </div>
-        <div className='card'>
-          <AddButton />
+        <div className='block'>
+          <AddGroupButton />
+          <AddContactButton />
           <SaveButton />
           <ClearButton />
         </div>
+        <div className='block'>
+          <ActiveGroup />
+        </div>
+        <div className='block'>
+          <ActiveContact />
+        </div>
       </div>
-      <div className='block'>
-        <ActiveGroup />
-      </div>
-      <div className='block'>
-        карточка контакта
-      </div>
-
     </div>
   );
 }

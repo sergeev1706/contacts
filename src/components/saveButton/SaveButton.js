@@ -1,19 +1,17 @@
 
-
-import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 
 const SaveButton = () => {
 
-    const allContacts = useSelector(state => state.toolkit.allContacts)
+  const allContacts = useSelector(state => state.toolkit.allContacts);
 
-    function saveData() {
-        localStorage.setItem('allContacts', JSON.stringify(allContacts));
-    }
+  const handleClick = () => {
+    localStorage.setItem('allContacts', JSON.stringify(allContacts));
+  }
 
-    return (
-        <button onClick={saveData}>сохранить данные</button>
-    );
+  return (
+    <button onClick={handleClick}>сохранить в localStorage</button>
+  )
 }
 
 export default SaveButton;
