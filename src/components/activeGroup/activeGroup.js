@@ -13,6 +13,7 @@ const ActiveGroup = () => {
   const isAddContact = useSelector(state => state.toolkit.isAddContact);
   const allContacts = useSelector(state => state.toolkit.allContacts);
 
+  // стэйты инпута
   const [nameValue, setNameValue] = useState('');
   const [surnameValue, setSurnameValue] = useState('');
   const [profValue, setProfValue] = useState('');
