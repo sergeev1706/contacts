@@ -6,3 +6,17 @@
   display: flex;
   justify-content: space-between;
 }
+
+.remove-btn {
+  padding: 0 20px;
+  background-color: #f77;
+  border-radius: 10px;
+}
+
+.remove-btn:hover {
+  background-color: #ff3e3e;
+}
+
+.remove-btn:active {
+  background-color: #ff0303;
+}

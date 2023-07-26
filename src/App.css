@@ -20,7 +20,7 @@
     padding: 20px;
 }
 
-button {
+.btn {
     width: 100%;
     padding: 10px;
     border: 1px solid black;
@@ -29,10 +29,15 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.btn:hover {
     background-color: #27db36;
 }
 
-button:active {
+.btn:active {
     background-color: #00a90e;
+}
+
+input {
+    border: none;
+    outline: none;
 }

@@ -14,6 +14,7 @@ const AddContact = () => {
 
   return (
     <button
+      className="btn"
       onClick={handleClick}
       disabled={allContacts.length === 0}>
       добавить контакт в активную группу

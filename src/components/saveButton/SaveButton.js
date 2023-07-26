@@ -10,7 +10,7 @@ const SaveButton = () => {
   }
 
   return (
-    <button onClick={handleClick}>сохранить в localStorage</button>
+    <button className="btn" onClick={handleClick}>сохранить в localStorage</button>
   )
 }
 

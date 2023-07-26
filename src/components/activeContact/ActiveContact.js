@@ -67,7 +67,7 @@ const ActiveContact = () => {
         :
         <>
           <br />
-          <span>{prop}</span>
+          <span>{prop}: </span>
           <input
             autoFocus
             value={value}
@@ -76,7 +76,7 @@ const ActiveContact = () => {
           />
           <br />
           <br />
-          <button>save</button>
+          <button className='btn'>save</button>
         </>
       }
     </div>

@@ -5,7 +5,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const toolkitReducer = createSlice({
     name: 'toolkit',
     initialState: {
-        count: 0,
+        addGroupInputIsactive: false,
         allContacts:
             JSON.parse(localStorage.getItem('allContacts'))
                 ?
@@ -20,12 +20,25 @@ const toolkitReducer = createSlice({
                         name: 'name1',
                         surname: 'surname1',
                         prof: 'prof1',
-                        phone: '123 - 123',
+                        phone: '123-123',
                         isActive: true,
                     }]
                 }],
     },
     reducers: {
+        removeGroupAction(state, action) {
+            state.allContacts = state.allContacts.filter(el => el.id !== action.payload);
+        },
+        removeContactAction(state, action) {
+            state.allContacts.map(el => {
+                if (el.isActive) {
+                    el.contacts = el.contacts.filter(el => el.id !== action.payload)
+                }
+            });
+        },
+        toggleActiveStateAddInput(state) {
+            state.addGroupInputIsactive = !state.addGroupInputIsactive;
+        },
         addGroupAction(state, action) {
             state.allContacts.push(action.payload);
         },
@@ -62,6 +75,9 @@ const toolkitReducer = createSlice({
 export default toolkitReducer.reducer
 
 export const {
+    removeGroupAction,
+    removeContactAction,
+    toggleActiveStateAddInput,
     addGroupAction,
     changeActiveStateGroup,
     toggleStateIsAddContact,

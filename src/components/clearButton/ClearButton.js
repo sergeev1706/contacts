@@ -7,7 +7,7 @@ const ClearButton = () => {
   }
 
   return (
-    <button onClick={handleClick}>очистить данные</button>
+    <button className="btn" onClick={handleClick}>очистить данные</button>
   )
 }
 

@@ -1,6 +1,8 @@
 
-import { addGroupAction } from "../../storage/toolkitReducer";
+// import { addGroupAction } from "../../storage/toolkitReducer";
 import { useDispatch, useSelector } from "react-redux";
+import { toggleActiveStateAddInput } from '../../storage/toolkitReducer';
+
 
 const AddGroup = () => {
 
@@ -8,16 +10,11 @@ const AddGroup = () => {
   const allContacts = useSelector(state => state.toolkit.allContacts)
 
   const handleClick = () => {
-    dispatch(addGroupAction({
-      id: Date.now(),
-      name: prompt(),
-      isActive: allContacts.length > 0 ? false : true,
-      contacts: [],
-    }))
+    dispatch(toggleActiveStateAddInput());
   }
 
   return (
-    <button onClick={handleClick}>добавить группу</button>
+    <button className="btn" onClick={handleClick}>добавить группу</button>
   )
 }
 
