@@ -94,7 +94,7 @@ const ActiveGroup = () => {
       <div className='input-group'><span>name: </span><input autoFocus type="text" onChange={(e) => setNameValue(e.target.value)} /></div>
       <div className='input-group'><span>surn: </span><input type="text" onChange={(e) => setSurnameValue(e.target.value)} /></div>
       <div className='input-group'><span>prof: </span><input type="text" onChange={(e) => setProfValue(e.target.value)} /></div>
-      <div className='input-group'><span>prof: </span><input type="text" onChange={(e) => setProfValue(e.target.value)} /></div>
+      <div className='input-group'><span>phone: </span><input type="text" onChange={(e) => setPhoneValue(e.target.value)} /></div>
 
       <button className='btn' type="submit">submit</button>
     </form>
